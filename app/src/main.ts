@@ -923,7 +923,7 @@ function desenharControlesSessao(config: Configuracoes) {
   const ativo = restante > 0;
   estadoFoco.textContent = ativo ? `Modo foco ativo — ${Math.ceil(restante / 60)} min restantes.` : "Modo foco inativo.";
   const alternar = document.querySelector<HTMLButtonElement>("#alternar-foco")!;
-  alternar.textContent = ativo ? "Encerrar modo foco" : `Iniciar modo foco (Ctrl+Alt+F)`;
+  alternar.textContent = ativo ? "Encerrar modo foco" : "Iniciar modo foco (Ctrl+Shift+F)";
 }
 
 function desenharSitesBloqueados(sites: string[]) {

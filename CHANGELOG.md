@@ -1,16 +1,24 @@
-# Histórico de versões
+# Histórico de mudanças
 
-As versões públicas seguem SemVer durante a fase `0.x`; recursos e formatos ainda podem mudar.
+Mudanças relevantes, agrupadas por versão. Versões intermediárias sem fonte/tags públicas não são tratadas como releases reproduzíveis. A evolução antes da linha pública está resumida em [Histórico e estado das versões](docs/historico-de-versoes.md).
 
-## 0.1.35 — candidata de reconstrução para testes públicos
+## [0.1.36] — 2026-10-05 — prévia pública
 
-- Reinicia a linha pública sobre o comportamento observado na 0.1.28. O snapshot-fonte exato da 0.1.28 não foi localizado; a reconstrução e seus limites estão registrados em `docs/release-0.1.35.md`.
-- Retira a camada separada de WebView usada nas sugestões e a resolução externa de vídeo/HLS/DASH da candidata 0.1.34.
-- Mantém downloads comuns e arquivos expostos no DOM, além de histórico local de downloads e leitura offline.
-- Busca normal pelo DuckDuckGo, comandos `@` e `#`, clique em sugestões, Voltar/Avançar e ciclo básico da janela foram testados no executável 0.1.35.
-- A página fica temporariamente oculta enquanto o painel de sugestões está aberto. A validação de leitores de tela e a revisão integral de acessibilidade permanecem pendentes.
-- Esta candidata não deve ser descrita como estável; issues de regressão devem incluir sistema, passos e URL de teste sem dados pessoais.
+- Corrige o texto do botão do modo foco para exibir o atalho real (`Ctrl+Shift+F`).
+- Acrescenta o catálogo detalhado de recursos, configurações, atalhos e limitações, além do histórico público disponível.
+- Atualiza instruções de contribuição e inclui formulários para relatos de defeitos e Pull Requests.
+- A navegação e os recursos são os mesmos da 0.1.35; esta revisão não amplia a cobertura de compatibilidade com sites ou acessibilidade.
+- Instalador e portátil Windows x64, hashes e nota de validação acompanham a [Release 0.1.36](https://github.com/bruno-sancar/canoa/releases/tag/v0.1.36).
 
-## Histórico anterior
+## [0.1.35] — 2026-10-05 — prévia pública
 
-O repositório inicia a linha pública a partir de um snapshot limpo de 0.1.35. O histórico de protótipos 0.1.1–0.1.34 permanece fora da linha pública para evitar expor dados de autoria pessoais e versões instáveis. A 0.1.28 é referência comportamental, não fonte reproduzível.
+- Reconstrói seletivamente a navegação a partir do comportamento observado na 0.1.28; não é o fonte original dessa versão.
+- Restaura e valida busca comum, referências `@`, seções `#`, ações por clique, Escape, navegação Voltar/Avançar, aba única e ciclo básico da janela.
+- Mantém biblioteca local, seletor Baixar, recursos de privacidade, grupos, cofre de senhas e ferramentas descritos no [catálogo de recursos e atalhos](docs/recursos-e-atalhos.md).
+- Exclui o experimento de resolver streams HLS/DASH/vídeos de serviços externos que apareceu na candidata 0.1.34.
+- Publica instalador por usuário e pacote portátil Windows x64 com hashes SHA-256 na [Release 0.1.35](https://github.com/bruno-sancar/canoa/releases/tag/v0.1.35).
+- Limitações conhecidas: sem assinatura Authenticode ou atualização automática; acessibilidade com leitor de tela e compatibilidade ampla com sites aguardam mais validação; ver [nota de release](docs/release-0.1.35.md).
+
+## Convenção para próximas versões
+
+Adicionar mudanças ao topo deste arquivo, agrupadas em **Adicionado**, **Alterado**, **Corrigido**, **Removido** e **Limitações**. Registre apenas o que está presente na tag correspondente. A nota GitHub deve linkar a mesma entrada e declarar prévia/estável, testes, hashes e problemas conhecidos.

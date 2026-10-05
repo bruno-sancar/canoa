@@ -1,6 +1,6 @@
 [package]
 name = "canoa"
-version = "0.1.35"
+version = "0.1.36"
 description = "Navegador desktop Canoa"
 license = "MIT"
 edition = "2021"

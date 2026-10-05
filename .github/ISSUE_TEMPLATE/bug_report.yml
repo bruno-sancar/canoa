@@ -1,0 +1,53 @@
+name: Relatar um problema
+description: Informe um defeito reproduzível no Canoa.
+title: "[Problema]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Antes de enviar, remova senhas, cookies, tokens, URLs privadas e qualquer dado pessoal. Não anexe arquivos de perfil do Canoa.
+  - type: input
+    id: version
+    attributes:
+      label: Versão do Canoa
+      placeholder: 0.1.35
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Versão e arquitetura do Windows
+      placeholder: Windows 11 24H2, x64
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Como reproduzir
+      description: Liste passos curtos. Use uma URL pública de exemplo ou descreva o tipo de página sem revelar dados privados.
+      placeholder: |
+        1. Abra...
+        2. Selecione...
+        3. Observe...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: O que esperava que acontecesse?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: O que aconteceu?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidência opcional
+      description: Mensagem de erro ou captura sem dados pessoais. Nunca envie dados do cofre ou perfil.
+    validations:
+      required: false

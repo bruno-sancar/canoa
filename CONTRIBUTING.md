@@ -26,11 +26,12 @@ cargo fmt --all -- --check
 cargo test --locked --lib
 ```
 
-O pipeline também compila a interface e roda a suíte Rust no Windows. Para mudanças de interface, descreva os cenários visuais testados e inclua capturas sem dados pessoais.
+O pipeline do GitHub Actions instala dependências, compila a interface, confere a formatação, executa os testes Rust, compila o pacote Windows e guarda o instalador/ executável como artefato da execução. Ele não publica automaticamente uma Release. Para mudanças de interface, descreva os cenários visuais testados e inclua capturas sem dados pessoais.
 
 ## Pull requests
 
 - Use um título claro no imperativo, descreva motivação, implementação e validação.
 - Mantenha o escopo pequeno e evite commits com arquivos gerados.
+- Atualize `CHANGELOG.md` quando a mudança altera comportamento visível; corrija também README, inventário de recursos, atalhos e nota da versão quando forem afetados.
 - Cada alteração aceita é licenciada sob MIT, salvo indicação expressa em contrário. Dependências e listas de terceiros conservam suas licenças próprias.
 - A equipe pode pedir alterações, testes adicionais ou dividir uma contribuição em etapas.

@@ -2,19 +2,19 @@
 
 **Canoa é um navegador desktop para Windows, em português, com foco em navegação organizada, privacidade local e controle do usuário.** Ele usa Tauri 2 e o WebView2 Runtime da Microsoft; não incorpora o Google Chrome nem baixa o navegador Edge completo.
 
-> **Estado do projeto:** candidata 0.1.35 para testes públicos. A fonte exata que gerou o executável 0.1.28 não foi recuperada. Esta linha recomeça a partir do comportamento observado na 0.1.28, com fonte reconstruída e regressões de busca/sugestões tratadas nesta versão. Não é uma recompilação byte a byte da 0.1.28. Leia as limitações e os testes pendentes antes de usar.
+> **Estado do projeto:** prévia pública 0.1.36 para testes. A fonte exata que gerou o executável 0.1.28 não foi recuperada. Esta linha recomeça a partir do comportamento observado na 0.1.28, com fonte reconstruída e regressões de busca/sugestões tratadas na 0.1.35. Não é uma recompilação byte a byte da 0.1.28. Leia as limitações e os testes pendentes antes de usar.
 
-## O que há nesta prévia
+## Recursos desta prévia
 
-- Navegação por abas, pesquisa pela barra, fontes de pesquisa configuráveis e sugestões para abas abertas e itens locais. `@` filtra referências da biblioteca e `#` abre seções de Configurações.
-- Favoritos com marcadores, lista de leitura, Baixados com histórico e capturas de texto/leitura offline.
-- Download de arquivos e recursos diretamente expostos pela página, como imagens, áudio, vídeo e documentos HTTP(S). Streams HLS/DASH e resolução de vídeos por serviços externos não fazem parte desta versão.
-- Bloqueio local de requisições conhecidas de anúncios e rastreadores, exceções por site, remoção opcional de parâmetros de rastreamento, sites bloqueados, limites de tempo e modo foco.
-- Grupos de abas, controles de mudo, histórico local opcional, limpeza de cookies/cache e informações de memória/armazenamento.
-- Cofre local cifrado para guardar e consultar credenciais. A senha mestra não é recuperável. Esta prévia não promete sincronização, preenchimento automático nem integração com PIN do Windows.
-- Identificação indicativa de páginas que parecem exigir assinatura. O Canoa não remove paywalls, não contorna assinaturas e não desbloqueia conteúdo pago.
+O Canoa reúne navegação por abas e uma biblioteca local com Favoritos, Lista de leitura e Baixados. A barra pesquisa na web, sugere abas e itens locais, usa `@` para escolher uma coleção e `#` para localizar uma seção de Configurações. A lista de fontes pode restringir uma consulta ao domínio selecionado.
 
-Consulte [o escopo e as limitações da 0.1.35](docs/release-0.1.35.md) antes de usar ou distribuir a prévia.
+Configurações organiza pesquisa, barra de endereço, Favoritos, Lista de leitura, memória e armazenamento, Baixados, Histórico, Tempo e foco, Cookies e cache, Proteção e bloqueios, Senhas, Atalhos e informações do Canoa. O inventário completo, o que cada opção faz, os atalhos confirmados e as limitações estão em [Recursos e atalhos](docs/recursos-e-atalhos.md).
+
+Esta versão inclui bloqueio local de anúncios e rastreadores conhecidos, exceções por site, limpeza opcional de parâmetros de rastreamento, bloqueio de domínios, limites de tempo e modo foco. Também inclui grupos de abas, mudo por aba/página, cofre local cifrado, histórico opcional, limpeza de cookies/cache e medição agregada de memória do Canoa/WebView2.
+
+**Limites relevantes:** o seletor Baixar lista arquivos HTTP(S) diretamente expostos pela página e permite guardar texto/captura HTML estática; não resolve streams HLS/DASH, DRM ou conteúdo que o site não expõe. Downloads comuns são iniciados pelo WebView2 e têm menos informações de progresso/controle. A indicação de acesso a artigos é informativa: não remove paywalls, autenticação ou controles de acesso. O cofre não sincroniza nem preenche formulários automaticamente. Há recursos cujo funcionamento foi compilado/testado, mas ainda precisa de mais validação em sites e computadores diferentes; o status está descrito no inventário.
+
+Leia também [a nota da versão 0.1.36](docs/release-0.1.36.md), o [histórico de mudanças](CHANGELOG.md) e [o histórico disponível](docs/historico-de-versoes.md). A linha do tempo explica o que foi observado e preservado, e distingue isso de versões com código-fonte reproduzível.
 
 ## Baixar e instalar
 
@@ -22,7 +22,7 @@ Os instaladores e executáveis portáteis devem ser baixados da seção **Releas
 
 Os executáveis são distribuídos sem assinatura Authenticode nesta fase; o Windows pode exibir um aviso de reputação. Confira os hashes SHA-256 publicados junto de cada release antes de executar o arquivo.
 
-**Instalação via terminal/WinGet ainda não está publicada.** Primeiro vamos estabilizar a URL do instalador, os hashes e o processo de release; depois será possível solicitar a inclusão do manifesto do Canoa no catálogo WinGet. As configurações do navegador são feitas pela interface do Canoa. Não há CLI suportada para alterar configurações ou segredos.
+**Instalação via terminal/WinGet ainda não está publicada.** Até que um manifesto seja aceito no catálogo WinGet, instale pelo executável na página Releases. As configurações do navegador são feitas pela interface do Canoa; não há CLI suportada para alterar configurações ou segredos.
 
 ## Compilar no Windows
 
@@ -70,7 +70,7 @@ Mais detalhes e canais de reporte estão em [SECURITY.md](SECURITY.md) e [THIRD_
 
 ## Contribuir
 
-Relatos, documentação e contribuições são bem-vindos. Leia [CONTRIBUTING.md](CONTRIBUTING.md) e [CHANGELOG.md](CHANGELOG.md). A licença do código do Canoa é MIT; algumas listas de filtros e dependências seguem termos próprios.
+Relatos, documentação e contribuições são bem-vindos. Leia [CONTRIBUTING.md](CONTRIBUTING.md), [CHANGELOG.md](CHANGELOG.md) e [o histórico](docs/historico-de-versoes.md). Para enviar um relato, use a aba Issues deste repositório e inclua versão, Windows, passos e resultado esperado; remova URLs privadas, credenciais e dados do perfil.
 
 ## Licença
 
