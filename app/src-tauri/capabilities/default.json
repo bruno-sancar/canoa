@@ -1,0 +1,13 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Permissoes apenas para a interface local do Canoa",
+  "webviews": [
+    "main",
+    "tarefas",
+    "sugestoes"
+  ],
+  "permissions": [
+    "core:default"
+  ]
+}

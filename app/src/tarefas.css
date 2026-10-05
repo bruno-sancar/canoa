@@ -1,0 +1,37 @@
+body.tarefas-pagina { min-width: 560px; padding: 26px max(24px, calc((100vw - 1050px) / 2)); }
+.tarefas-cabecalho, .tarefas-secao-topo { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; }
+.tarefas-cabecalho { margin-bottom: 22px; }
+.tarefas-cabecalho h1 { margin: 0 0 4px; font-size: 1.5rem; font-weight: 600; }
+.tarefas-cabecalho p { margin: 0; color: var(--cor-suave); font-size: 0.82rem; }
+.tarefas-cabecalho button, .tarefa-aba button { width: auto; height: 32px; padding: 0 12px; font-size: 0.78rem; }
+#mensagem { min-height: 20px; color: var(--cor-suave); font-size: 0.78rem; }
+.tarefas-resumo { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin: 4px 0 28px; }
+.tarefas-resumo div { min-width: 0; padding: 14px; border: 1px solid var(--cor-borda); border-radius: var(--raio); background: var(--cor-superficie); }
+.tarefas-resumo span { display: block; margin-bottom: 7px; color: var(--cor-suave); font-size: 0.74rem; }
+.tarefas-resumo abbr, th abbr { text-decoration: underline dotted; text-underline-offset: 3px; cursor: help; }
+.tarefas-resumo strong { font-size: 1.12rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+.tarefas-secao { border-top: 1px solid var(--cor-borda); padding: 18px 0 22px; }
+.tarefas-secao-topo { align-items: center; margin-bottom: 11px; }
+.tarefas-secao-topo h2 { margin: 0; font-size: 1rem; }
+.tarefas-secao-topo span { color: var(--cor-suave); font-size: 0.76rem; }
+.tarefas-lista { border: 1px solid var(--cor-borda); border-radius: var(--raio); overflow: hidden; background: var(--cor-superficie); }
+.tarefa-aba { display: flex; align-items: center; gap: 16px; min-height: 61px; padding: 10px 12px; border-bottom: 1px solid var(--cor-borda); }
+.tarefa-aba:last-child { border-bottom: 0; }
+.tarefa-aba-descricao { flex: 1; min-width: 0; }
+.tarefa-aba-descricao strong, .tarefa-aba-descricao small { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tarefa-aba-descricao strong { margin-bottom: 3px; font-size: 0.84rem; }
+.tarefa-aba-descricao small { color: var(--cor-suave); font-size: 0.73rem; }
+.tarefa-estado { min-width: 54px; color: var(--cor-suave); font-size: 0.76rem; }
+.tarefas-explicacao { color: var(--cor-suave); font-size: 0.77rem; line-height: 1.5; }
+.tarefas-ajuda { margin: 0 0 12px; color: var(--cor-suave); font-size: 0.78rem; line-height: 1.5; }
+.tarefas-ajuda summary { width: fit-content; margin-bottom: 6px; color: var(--cor-acao); cursor: pointer; }
+.tarefas-ajuda p { margin: 7px 0; }
+.tarefas-tabela-wrap { overflow-x: auto; border: 1px solid var(--cor-borda); border-radius: var(--raio); background: var(--cor-superficie); }
+table { width: 100%; border-collapse: collapse; font-size: 0.78rem; }
+th, td { padding: 10px 12px; border-bottom: 1px solid var(--cor-borda); text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+tr:last-child td { border-bottom: 0; }
+th:first-child, td:first-child { text-align: left; min-width: 180px; }
+th { color: var(--cor-suave); font-weight: 500; }
+td strong, td small { display: block; }
+td small { color: var(--cor-suave); margin-top: 2px; }
+@media (max-width: 700px) { .tarefas-resumo { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

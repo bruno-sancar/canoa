@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canoa — Tarefas</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+    <link rel="stylesheet" href="/src/tarefas.css" />
+    <script type="module" src="/src/tarefas.ts" defer></script>
+  </head>
+  <body class="tarefas-pagina">
+    <header class="tarefas-cabecalho">
+      <div><h1>Tarefas</h1><p>Processos do Canoa e do WebView2 no Windows</p></div>
+      <button id="atualizar" type="button">Atualizar</button>
+    </header>
+    <div id="mensagem" role="status" aria-live="polite"></div>
+    <section class="tarefas-resumo" aria-label="Resumo">
+      <div><span><abbr title="Memória privada comprometida pelos processos; não é a RAM física exclusiva.">Memória privada ⓘ</abbr></span><strong id="total-privado">—</strong></div>
+      <div><span><abbr title="Soma da memória residente de cada processo. Inclui páginas compartilhadas que podem ser contadas mais de uma vez.">Em RAM, com compartilhamento ⓘ</abbr></span><strong id="total-trabalho">—</strong></div>
+      <div><span><abbr title="Quantidade de processos medidos do Canoa e de seus descendentes.">Processos ⓘ</abbr></span><strong id="total-processos">—</strong></div>
+      <div><span><abbr title="Abas não selecionadas; a página delas foi fechada até serem reabertas.">Outras abas ⓘ</abbr></span><strong id="total-pausadas">—</strong></div>
+    </section>
+    <section class="tarefas-secao" aria-labelledby="titulo-abas">
+      <div class="tarefas-secao-topo"><h2 id="titulo-abas">Abas</h2><span id="total-abas"></span></div>
+      <div id="lista-abas" class="tarefas-lista"></div>
+      <p class="tarefas-explicacao">Só a aba selecionada pode manter uma página aberta. As outras guardam o endereço e recarregam quando abertas. Ao abrir Configurações, a página selecionada também é fechada temporariamente.</p>
+    </section>
+    <section class="tarefas-secao" aria-labelledby="titulo-processos">
+      <div class="tarefas-secao-topo"><h2 id="titulo-processos">Processos</h2><span id="atualizado-em"></span></div>
+      <details class="tarefas-ajuda"><summary>Como ler os processos e a memória</summary><p><strong>Canoa</strong> é o aplicativo. <strong>msedgewebview2.exe</strong> pertence ao WebView2, o motor da Microsoft que apresenta páginas; ele pode criar processos para página, GPU, rede e outras funções. Esta lista identifica a família pelo nome do executável, mas ainda não identifica com segurança a função de cada processo.</p><p><strong>PID</strong> é o identificador temporário do processo. <strong>Memória privada</strong> é memória comprometida para ele; parte pode não estar na RAM agora. <strong>Em RAM</strong> é o conjunto de trabalho residente e inclui páginas compartilhadas. Por isso, subtrair os dois valores não produz uma medida confiável de desperdício ou de memória livre.</p></details>
+      <div class="tarefas-tabela-wrap"><table><thead><tr><th>Processo</th><th><abbr title="Identificador do processo nesta execução.">PID ⓘ</abbr></th><th><abbr title="Memória privada comprometida; não equivale à RAM física exclusiva.">Memória privada ⓘ</abbr></th><th><abbr title="Conjunto de trabalho residente em RAM, incluindo páginas compartilhadas.">Em RAM ⓘ</abbr></th></tr></thead><tbody id="lista-processos"></tbody></table></div>
+      <p class="tarefas-explicacao">Os totais somam processos relacionados ao Canoa. Páginas compartilhadas podem aparecer na soma de RAM mais de uma vez. Estes números não representam o consumo individual de cada aba; abrir esta janela também usa memória.</p>
+      <p class="tarefas-explicacao">Limites automáticos de memória por aba ainda não estão disponíveis. Você pode fechar uma aba pela lista acima.</p>
+    </section>
+  </body>
+</html>

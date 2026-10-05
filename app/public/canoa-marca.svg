@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none">
+  <title>Canoa</title>
+  <path d="M81 255c25 19 91 30 175 30s150-11 175-30c-17 64-89 116-175 116S98 319 81 255Z" fill="#173A3B"/>
+  <path d="M81 255c-15-10-26-27-28-49 31 26 102 45 203 45s172-19 203-45c-2 22-13 39-28 49-36 24-100 35-175 35S117 279 81 255Z" fill="#104C55"/>
+  <path d="M202 349 322 139" stroke="#173A3B" stroke-width="22" stroke-linecap="round"/>
+  <path d="M317 147c16-30 39-43 63-41-1 26-17 49-47 65" fill="#173A3B"/>
+  <path d="M126 300c39 35 80 50 130 50s91-15 130-50" stroke="#F5F2E9" stroke-width="12" stroke-linecap="round"/>
+</svg>

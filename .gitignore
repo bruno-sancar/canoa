@@ -1,0 +1,30 @@
+# Compilação
+node_modules/
+dist/
+target/
+src-tauri/target/
+
+# Ambiente local
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+*.log
+__pycache__/
+*.pyc
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Briefing interno (marcado como confidencial no PDF)
+Briefing_Tecnico_Navegador_Zero_Impact.pdf
+
+# Executáveis locais de prova
+output/*.exe
+output/*.csv
+output/captura-invalida.png
+
+# Materiais recebidos apenas como referência; redistribuição não autorizada
+docs/referencias/
