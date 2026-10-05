@@ -2,7 +2,7 @@
 
 ## Reportar vulnerabilidades
 
-Use o formulário privado de vulnerabilidades na aba **Security / Advisories** do GitHub quando ele estiver habilitado para este repositório. Não publique detalhes exploráveis em uma issue pública antes de coordenar uma correção.
+Use **Security → Advisories → Report a vulnerability** no GitHub. O formulário privado de reporte está habilitado neste repositório. Não publique detalhes exploráveis em uma issue pública antes de coordenar uma correção.
 
 Ao reportar, inclua a versão do Canoa, o Windows e os passos mínimos para reproduzir. Não envie senhas, conteúdo do cofre, histórico pessoal, arquivos de perfil nem tokens. Apague URLs e dados pessoais dos logs antes de anexá-los.
 
