@@ -17,6 +17,22 @@ As faixas abaixo agrupam marcos registrados nas notas locais de desenvolvimento.
 | `0.1.35` | Reconstrução seletiva que retoma comportamento observado na `0.1.28`, recupera busca e ações de sugestões, mantém os recursos locais confirmados e publica um inventário explícito de estado e limitações. É uma prévia de testes, não uma recuperação exata do código 0.1.28. |
 | `0.1.36` | Corrige o rótulo visível do atalho de modo foco, detalha inventário/histórico e melhora os modelos de contribuição. Sem mudanças na navegação. |
 
+## Linha detalhada da regressão `0.1.28–0.1.34`
+
+As versões abaixo não são releases Git reproduzíveis. O resumo usa notas de desenvolvimento e testes visuais dos executáveis que foram preservados.
+
+| Versão | Mudança ou evidência preservada | Resultado conhecido |
+| --- | --- | --- |
+| `0.1.28` | Revisão de aba única, navegação e sugestões `@`/`#`; incluía Favoritos, Leitura, Baixados, Histórico, Senhas e Fontes na referência `@`. | Busca comum com Enter observada funcionando. `#` mostrava opções, mas Enter ainda podia submeter `#` ao buscador; não é evidência de que todas as sugestões estavam corretas. Fonte não recuperada. |
+| `0.1.29` | Introduziu uma WebView nativa separada para colocar o painel de sugestões acima da página. | Teste comparativo observou a busca comum sem navegar; interação de URL não foi confirmada. A camada visual melhorou num teste parcial, mas o fluxo completo não foi validado. |
+| `0.1.30` | Adicionou caminho IPC para seleção no painel nativo e preservação temporária da lista durante a transferência de foco. | Build e 38 testes passaram; houve teste visual parcial herdado da 0.1.29. A instalação visual e a seleção completa da 0.1.30 ficaram sem confirmação. |
+| `0.1.31` | Não há nota independente nem fonte versionada preservada para esta iteração. | Mudanças e comportamento próprios não podem ser afirmados com confiança. |
+| `0.1.32` | Diagnóstico relatou sugestões que renderizavam sem executar ações; tentou corrigir Enter, foco, IPC e ordem das WebViews. | Build e testes passaram; automação não conseguiu confirmar ações de busca, `@`, `#`, navegação ou fechamento no executável. |
+| `0.1.33` | Hotfix ajustou inicialização/dimensionamento do painel e instrumentação de erro. | Teste real voltou a observar busca comum, escolha de URL em `@`, seção em `#`, Nova aba e Voltar sem resposta confiável. O hotfix não resolveu a regressão. |
+| `0.1.34` | Experimento posterior adicionou observação de respostas de rede e resolução externa de vídeos/streams HLS/DASH. | Código dessa candidata foi descartado da linha pública 0.1.35; dependências externas e licença do ZIP de referência não foram adotadas. |
+
+Não houve releases oficiais/tag Git de `0.1.28–0.1.34` neste repositório público. Esta tabela preserva a sequência útil para entender a reconstrução, sem transformar testes incompletos em promessa de funcionamento nem simular um histórico de commits que não existe.
+
 ## O que a evidência permite afirmar
 
 - Há executáveis preservados da `0.1.28`, mas não foi localizado o snapshot-fonte que os gerou nem um commit/tag correspondente.
